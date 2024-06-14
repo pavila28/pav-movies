@@ -91,6 +91,10 @@ function movieDetailsPage() {
     categoriesPreviewSection.classList.add('inactive')
     genericSection.classList.add('inactive')
     movieDetailSection.classList.remove('inactive')
+
+    // ['#search', 'pavila']
+    const [_, movieId] = location.hash.split('=')
+    getMovieById(movieId)
 }
 function searchPage() {
     console.log('Search!')
